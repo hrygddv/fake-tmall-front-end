@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+
+    <style>
+        div.searchDiv{
+            background-color: #C40000;
+            width: 400px;
+            margin: 50px auto;
+            padding: 1px;
+            height: 40px;
+            display: block;
+        }
+        div.searchDiv input{
+            width: 275px;
+            height: 36px;
+            border: 1px solid transparent; 
+            margin: 1px;
+        }
+        div.searchDiv button{
+            font-size: 20px;
+            color: white;
+            background-color: transparent;
+            border: 0px;
+            
+        }
+    </style>
+
+    <body>
+        <!-- 左侧图片 -->
+        <a href="#nowhere">
+            <image id="logo" class="logo" src="http://how2j.cn/tmall/img/site/logo.gif"></image>
+        </a>
+        <!-- 搜索栏 -->
+        <div class="searchDiv">
+            <input type="text" placeholder="时尚男鞋 太阳镜" name="keyword">
+            <button class="searchButton" type="submit">搜索</button>
+            <div class="searchBelow">
+                <span><a href="#nowhere">平衡车</a></span>|
+                <span><a href="#nowhere">扫地机器人</a></span>|
+                <span><a href="#nowhere">原汁机</a></span>|
+                <span><a href="#nowhere">冰箱</a></span>
+            </div>
+        </div>
+    </body>
+</html>
