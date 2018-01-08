@@ -8,6 +8,56 @@
     <script src="js/bootstrap.min.js"></script>
 </head>
 
+<style>
+    div.categoryWithCarousel{
+        width: 100%;
+        position: relative;
+    }
+    div.categoryWithCarousel div.headbar{
+        background: #DD2727;
+    }
+    div.categoryWithCarousel div.head{
+        width: 200px;
+        height: 36px;
+        background: #C60A0A;
+        line-height: 36px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        margin-left: 20px;
+        display: inline-block;
+    }
+    div.categoryWithCarousel div.rightMenu{
+        display: inline-block;
+    }
+    div.categoryWithCarousel div.rightMenu a{
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+    }
+    div.categoryWithCarousel div.rightMenu span{
+        margin: 0px 20px;
+    }
+    div.categoryWithCarousel div.rightMenu img{
+        height: 30px;
+    }
+    div.carousel-of-product{
+        width: 1024px;
+        height: 510px;
+        margin: 0px auto;
+    }
+    img.carouselImage{
+        height: 510px !important;
+    }
+    div.carsouselBackgroundDiv{
+        width: 100%;
+        height: 510px;
+        background-color: #E8E8E8;
+        position: absolute;
+        z-index: -1;
+    }
+</style>
+
 <body>
     <div id="categoryWithCarousel" class="categoryWithCarousel">
         <div class="headbar">
@@ -15,36 +65,36 @@
                 <span class="glyphicon glyphicon-th-list"></span>
                 <span>商品分类</span>
             </div>
-        </div>
-        <div class="rightMenu">
-            <span>
-                <a href="#nowhere">
-                    <img src="http://how2j.cn/tmall/img/site/chaoshi.png">
-                </a>
-            </span>
-            <span>
-                <a href="#nowhere">
-                    <img src="http://how2j.cn/tmall/img/site/guoji.png">
-                </a>
-            </span>
-            <span>
-                <a href="#nowhere">平板电视</a>
-            </span>
-            <span>
-                <a href="#nowhere">电热水器</a>
-            </span>
+            <div class="rightMenu">
+                <span>
+                    <a href="#nowhere">
+                        <img src="http://how2j.cn/tmall/img/site/chaoshi.png">
+                    </a>
+                </span>
+                <span>
+                    <a href="#nowhere">
+                        <img src="http://how2j.cn/tmall/img/site/guoji.png">
+                    </a>
+                </span>
+                <span>
+                    <a href="#nowhere">平板电视</a>
+                </span>
+                <span>
+                    <a href="#nowhere">电热水器</a>
+                </span>
+            </div>
         </div>
         <div id="carousel-of-product" data-ride="carousel" class="carousel-of-product carousel slide">
             <!-- Indicators -->
-            <ol class="caroulse-indicators">
-                <li class="active" data-slide-to="0" data-target="#carousel-of-product"></li>
-                <li data-slide-to="1" data-target="#carousel-of-product" class=""></li>
-                <li data-slide-to="2" data-target="#carousel-of-product" class=""></li>
-                <li data-slide-to="3" data-target="#carousel-of-product" class=""></li>
+            <ol class="carousel-indicators">
+                <li data-slide-to="0" data-target="#carousel-of-product" class="active"></li>
+                <li data-slide-to="1" data-target="#carousel-of-product"></li>
+                <li data-slide-to="2" data-target="#carousel-of-product"></li>
+                <li data-slide-to="3" data-target="#carousel-of-product"></li>
             </ol>
 
             <!-- Wrapper of slides -->
-            <div role="listbox" class="caroulse-inner">
+            <div role="listbox" class="carousel-inner">
                 <div class="item active">
                     <img src="http://how2j.cn/tmall/img/lunbo/1.jpg" class="carousel carouselImage">
                 </div>
