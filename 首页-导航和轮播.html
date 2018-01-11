@@ -9,14 +9,16 @@
 </head>
 
 <style>
-    div.categoryWithCarousel{
+    div.categoryWithCarousel {
         width: 100%;
         position: relative;
     }
-    div.categoryWithCarousel div.headbar{
+
+    div.categoryWithCarousel div.headbar {
         background: #DD2727;
     }
-    div.categoryWithCarousel div.head{
+
+    div.categoryWithCarousel div.head {
         width: 200px;
         height: 36px;
         background: #C60A0A;
@@ -27,38 +29,70 @@
         margin-left: 20px;
         display: inline-block;
     }
-    div.categoryWithCarousel div.rightMenu{
+
+    div.categoryWithCarousel div.rightMenu {
         display: inline-block;
     }
-    div.categoryWithCarousel div.rightMenu a{
+
+    div.categoryWithCarousel div.rightMenu a {
         font-size: 14px;
         color: white;
         text-decoration: none;
     }
-    div.categoryWithCarousel div.rightMenu span{
+
+    div.categoryWithCarousel div.rightMenu span {
         margin: 0px 20px;
     }
-    div.categoryWithCarousel div.rightMenu img{
+
+    div.categoryWithCarousel div.rightMenu img {
         height: 30px;
     }
-    div.carousel-of-product{
+
+    div.carousel-of-product {
         width: 1024px;
         height: 510px;
         margin: 0px auto;
     }
-    img.carouselImage{
+
+    img.carouselImage {
         height: 510px !important;
     }
-    div.carsouselBackgroundDiv{
+
+    div.carsouselBackgroundDiv {
         width: 100%;
         height: 510px;
         background-color: #E8E8E8;
         position: absolute;
         z-index: -1;
     }
+
+    img.catear {
+        position: absolute;
+        height: 20px;
+        display: none;
+    }
 </style>
+<script>
+    $(function () {
+        $("div.rightMenu span").mouseenter(function () {
+            var left = $(this).position().left;
+            var top = $(this).position().top;
+            var width = $(this).css("width");
+            var destLeft = parseInt(left) + parseInt(width) / 2;
+            $("img#catear").css("left", destLeft);
+            $("img#catear").css("top", top);
+            $("img#catear").fadeIn(500);
+        });
+        $("div.rightMenu span").mouseleave(function () {
+            $("img#catear").hide();
+        });
+    });
+</script>
 
 <body>
+    <div style="width: 100%; height: 20px;">
+        <img class="catear" id="catear" src="http://how2j.cn/tmall/img/site/catear.png">
+    </div>
     <div id="categoryWithCarousel" class="categoryWithCarousel">
         <div class="headbar">
             <div class="head">
@@ -78,6 +112,12 @@
                 </span>
                 <span>
                     <a href="#nowhere">平板电视</a>
+                </span>
+                <span>
+                    <a href="#nowhere">马桶</a>
+                </span>
+                <span>
+                    <a href="#nowhere">沙发</a>
                 </span>
                 <span>
                     <a href="#nowhere">电热水器</a>
