@@ -2,7 +2,7 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="js/jquery-3.2.1.min.js"></script>
-<link href="css/bootstrap.min.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
 <script src="js/bootstrap.min.js"></script>
 
 <style>
@@ -14,7 +14,173 @@
         margin: 40px 20px;
     }
     div.imgInimgAndInfo{
-        
+        width: 100px;
+        float: left;
+    }
+    div.infoInimgAndInfo{
+        padding: 0px 20px;
+        overflow: hidden;
+    }
+    div.infoInimgAndInfo div.productTitle{
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0px 10px;
+    }
+    div.infoInimgAndInfo div.productSubTitle{
+        color: #DD2727;
+        font-size: 12px;
+        margin: 0px 10px;
+    }
+    div.infoInimgAndInfo div.juhuasuan{
+        background-color: #2DA77A;
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        margin-top: 10px;
+    }
+    div.infoInimgAndInfo span.juhuasuanBig{
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 黑体;
+    }
+    div.infoInimgAndInfo span.juhuasuanTime{
+        color: #FFC057;
+        font-weight: bold;
+    }
+    div.infoInimgAndInfo div.productPriceDiv{
+        background-image:url(http://how2j.cn/tmall/img/site/priceBackground.png);
+        height: 102px;
+        padding: 10px;
+        color: #666666;
+    }
+    div.infoInimgAndInfo div.gouwujuanDiv{
+        margin-top: 5px;
+    }
+    div.infoInimgAndInfo div.originalDiv{
+        margin-top: 5px;
+    }
+    div.infoInimgAndInfo span.originalPriceDesc{
+        color: #999999;
+        display: inline-block;
+        width: 68px;
+    }
+    div.infoInimgAndInfo span.originalPrice{
+        font-size: 12px;
+        color: #333333;
+        text-decoration: line-through;
+    }
+    div.infoInimgAndInfo span.promotionPriceYuan{
+        font-size: 18px;
+        color: #C40000;
+    }
+    div.infoInimgAndInfo span.promotionPrice{
+        color: #C40000;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    div.infoInimgAndInfo span.promotionPriceDesc{
+        color: #999999;
+        display: inline-block;
+        width: 68px;
+        position: relative;
+        left: 0px;
+        top: -10px;
+    }
+    div.infoInimgAndInfo div.productSaleAndReviewNumber div{
+        display: inline-block;
+        width: 49%;
+        text-align: center;
+        color: #999999;
+        font-size: 12px;
+    }
+    div.infoInimgAndInfo div.productSaleAndReviewNumber div:first-child{
+        border-right: 1px solid #E5DFDA;
+    }
+    div.infoInimgAndInfo div.productNumber{
+        color: #999999;
+    }
+    div.infoInimgAndInfo span.productNumberSettingSpan{
+        border: 1px solid #999;
+        display: inline-block;
+        width: 43px;
+        height: 32px;
+        padding-top: 7px;
+    }
+    div.infoInimgAndInfo input.productNumberSetting{
+        border: 0px;
+        height: 80%;
+        width: 80%;
+    }
+    div.productNumber span.updown img{
+        display: inline-block;
+        vertical-align: top;
+    }
+    div.productNumber span.updown{
+        border: 1px solid #999;
+        display: block;
+        width: 20px;
+        height: 14px;
+        text-align: center;
+        padding-top: 4px;
+    }
+    div.productNumber span.updownMiddle{
+        height: 4px;
+        display: block;
+    }
+    div.productNumber span.arrow{
+        display: inline-block;
+        width: 22px;
+        height: 32px;
+        vertical-align: top;
+    }
+    div.serviceCommitment{
+        margin: 20px 0px;
+    }
+    div.infoInimgAndInfo span.serviceCommitmentDesc{
+        color: #999999;
+    }
+    div.infoInimgAndInfo span.serviceCommitmentLink a{
+        color: #666666;
+    }
+    div.buyDiv{
+        margin: 20px auto;
+        text-align: center;
+    }
+    div.buyDiv button{
+        display: inline-block;
+        margin: 0px 10px;
+        width: 180px;
+        height: 40px;
+    }
+    button.buyButton{
+        border: 1px solid #C40000;
+        background-color: #FFEDED;
+        text-align: center;
+        line-height: 40px;
+        font-size: 16px;
+        color: #C40000;
+    }
+    button.addCartButton{
+        border: 1px solid #C40000;
+        background-color: #C40000;
+        text-align: center;
+        line-height: 40px;
+        font-size: 16px;
+        color: white;
+    }
+    button.addCartButton span.glyphicon{
+        font-size: 16px;
+        margin-right: 8px;
+    }
+    a:hover{
+        text-decoration: none;
+    }
+    .redColor{
+        color: #C40000;
+    }
+    .boldWord{
+        font-weight: bold;
     }
 </style>
 
