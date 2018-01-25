@@ -8,24 +8,38 @@
     <script src="js/bootstrap.min.js"></script>
 </head>
 
+<script>
+    $(function () {
+        $("div.productReviewDiv").hide();
+        $("a.productDetailTopReviewLink").click(function () {
+            $("div.productReviewDiv").show();
+            $("div.productDetailDiv").hide();
+        });
+        $("a.productReviewTopPartSelectedLink").click(function () {
+            $("div.productReviewDiv").hide();
+            $("div.productDetailDiv").show();
+        });
+    })
+</script>
+
 <style>
-    body{
+    body {
         font-size: 12px;
         font-family: Arial, Helvetica, sans-serif;
     }
-    div.productReviewDiv{
+
+    div.productDetailDiv {
         width: 790px;
         margin: 40px auto;
     }
-    div.productReviewTopPart{
+
+    div.productDetailTopPart {
         border: 1px solid #DFDFDF;
+        border-left-width: 0px;
     }
-    a.productReviewTopPartSelectedLink{
-        padding: 0px 20px;
-        color: #333333;
-    }
-    a.selected{
-        border-left: 1px solid  #cfbfb1;
+
+    a.selected {
+        border-left: 1px solid #cfbfb1;
         border-right: 1px solid #cfbfb1;
         color: #b10000;
         display: inline-block;
@@ -35,19 +49,21 @@
         text-align: center;
         position: relative;
     }
-    a.selected:before{
+
+    a.selected:before {
         content: "";
         display: block;
         border-width: 1px;
-        border-style: solid;
         border-color: #b00000;
+        border-style: solid;
         width: 90px;
         height: 0;
         position: absolute;
         top: -1px;
         margin-left: -1px;
     }
-    a.selected:after{
+
+    a.selected:after {
         content: "";
         display: block;
         border-color: #b00000 transparent transparent;
@@ -60,39 +76,158 @@
         left: 50%;
         margin-left: -5px;
     }
-    div.productReviewContentPart{
+
+    a.productDetailTopReviewLink {
+        padding: 0px 20px;
+        border-right: 1px dotted #d2d2d2;
+        color: #333333;
+    }
+
+    span.productDetailTopReviewLinkNumber {
+        color: #3355B9;
+    }
+
+    div.productParamterPart {
+        border: 1px solid #DFDFDF;
+        padding: 40px;
+    }
+
+    div.productParamter {
+        color: #999999;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    div.productParamterList span {
+        display: block;
+        width: 220px;
+        float: left;
+        padding: 8px 0px;
+        color: #666666;
+    }
+
+    div.productDetailImagesPart img {
+        display: block;
+        width: 790px;
+        margin: 20px 0px;
+    }
+
+    div.productReviewDiv {
+        width: 790px;
+        margin: 40px auto;
+    }
+
+    div.productReviewTopPart {
+        border: 1px solid #DFDFDF;
+    }
+
+    a.productReviewTopPartSelectedLink {
+        padding: 0px 20px;
+        color: #333333;
+    }
+
+    a.selected {
+        border-left: 1px solid #cfbfb1;
+        border-right: 1px solid #cfbfb1;
+        color: #b10000;
+        display: inline-block;
+        font-weight: bold;
+        line-height: 46px;
+        width: 90px;
+        text-align: center;
+        position: relative;
+    }
+
+    a.selected:before {
+        content: "";
+        display: block;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #b00000;
+        width: 90px;
+        height: 0;
+        position: absolute;
+        top: -1px;
+        margin-left: -1px;
+    }
+
+    a.selected:after {
+        content: "";
+        display: block;
+        border-color: #b00000 transparent transparent;
+        border-style: solid;
+        border-width: 5px;
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -1px;
+        left: 50%;
+        margin-left: -5px;
+    }
+
+    div.productReviewContentPart {
         padding-top: 50px;
     }
-    div.productReviewItem{
+
+    div.productReviewItem {
         border-bottom: 1px solid #E3E3E3;
         margin: 10px 0px;
     }
-    div.productReviewItem div.productReviewItemDesc{
+
+    div.productReviewItem div.productReviewItemDesc {
         width: 80%;
         display: inline-block;
         color: #333333;
         margin: 5px 20px;
         float: left;
     }
-    div.productReviewItemDate{
+
+    div.productReviewItemDate {
         margin: 15px 0px 0px 0px;
         color: #CCCCCC;
     }
-    div.productReviewItem div.productReviewItemUserInfo{
+
+    div.productReviewItem div.productReviewItemUserInfo {
         color: #404040;
         margin: 5px 20px;
         padding: 20px 0px;
     }
-    span.userInfoGrayPart{
+
+    span.userInfoGrayPart {
         color: #999999;
     }
-    a:hover{
+
+    a:hover {
         color: #C40000;
         text-decoration: none;
     }
 </style>
 
 <body>
+    <div class="productDetailDiv" style="display: block;">
+        <div class="productDetailTopPart">
+            <a class="productDetailTopPartSelectedLink selected" href="#nowhere">商品详情</a>
+            <a class="productDetailTopReviewLink" href="#nowhere">累计评价
+                <span class="productDetailTopReviewLinkNumber">19</span>
+            </a>
+        </div>
+        <div class="productParamterPart">
+            <div class="productParamter">产品参数：</div>
+            <div class="productParamterList">
+                <span>材质成分: 聚酯纤维100% </span>
+                <span>品牌: Emyche/艾米秋 </span>
+                <span>货号: 129668 </span>
+                <span>尺码: L M S XL X </span>
+                <span>上市年份季节: 2016年夏季 </span>
+                <span>颜色分类: 白色 黑色 浅蓝 </span>
+                <span>适用年龄: 18-25周岁 </span>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="productDetailImagesPart">
+            <img src="http://how2j.cn/tmall/img/productDetail/8626.jpg">
+        </div>
+    </div>
     <div class="productPageDiv">
         <div class="productReviewDiv" style="display: block;">
             <div class="productReviewTopPart">
